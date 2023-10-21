@@ -23,7 +23,7 @@ async function main() {
     res.json(exampleService.generate(quantity));
   });
 
-  visaController.post('/stats', bodyParser.json({limit: '50mb'}), (req, res) => {
+  visaController.post('/stats', bodyParser.json({ limit: '50mb' }), (req, res) => {
     let date = new Date(req.query.date as string);
     if (isNaN(date.getTime())) {
       date = new Date();
